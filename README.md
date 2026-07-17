@@ -84,12 +84,6 @@ Portfolio Sharpe ratio (rf = 4%): **0.81**. VaR/CVaR are expressed as loss magni
 
 *Caveats:* drift and volatility are assumed constant and extrapolated from a trailing 2-year window that contained exceptional tech gains; GBM has no jumps, regime changes, or fat tails. Historical performance does not guarantee future results.
 
-## Resume bullet points
-
-- Built a multi-asset Monte Carlo simulation engine in Python (NumPy, pandas) generating 10,000 correlated 1-year price paths for 4 big-tech stocks via Geometric Brownian Motion with Cholesky-decomposed correlation structure; validated correlation fidelity to within 0.001 of historical estimates.
-- Estimated annualized drift, volatility, and a 4×4 correlation matrix from 500+ days of Yahoo Finance price data; computed 95% VaR/CVaR, percentile outcome cones, and gain/loss probabilities, quantifying a diversification benefit of 12+ volatility points (38% portfolio vs ~50% average single-stock) for an equal-weighted portfolio.
-- Delivered a reproducible analytics pipeline (fixed-seed, config-driven) that outputs a tidy metrics CSV and six publication-quality matplotlib/seaborn visualizations, including fan charts, return-distribution histograms with VaR markers, and a portfolio risk dashboard.
-- Derived actionable risk insights from simulated distributions — e.g. identified an 84% probability of portfolio gain with 23% 95% VaR and a 0.81 Sharpe ratio (rf = 4%), and flagged right-skew distortion where mean 1-year returns exceeded medians by up to 50 percentage points (PLTR).
 
 ## Disclaimer
 
